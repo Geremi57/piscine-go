@@ -27,7 +27,8 @@ slice := []string {
 					"word7",
 }
 
-for   range: {
+for  index,word := range slice {
+	fmt.Printf("The index is %v and the value is %v\n", index,word)
 	
 }
 }
