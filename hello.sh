@@ -1,3 +1,2 @@
-$ bash hello.sh
-Hello gwanga
-$
+#! bin/bash
+echo Hello gwanga
