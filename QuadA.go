@@ -37,5 +37,5 @@ fmt.Print("o")
 }
 
 func main() {
-	QuadA(5, 5)
+	QuadA(1, 5)
 }
