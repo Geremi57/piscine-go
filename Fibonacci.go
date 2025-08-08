@@ -17,3 +17,5 @@ func fibonacci(n int) int {
 func main() {
 	fibonacci(9)
 }
+
+// https://github.com/Frenchris/piscine-go-2/blob/master/raid1a.go
