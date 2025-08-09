@@ -2,7 +2,7 @@
 package main
 
 import (
-	"fmt" 
+	"fmt"
 )
 
 func retainhalf(str string) {
@@ -32,4 +32,20 @@ func main() {
 		var a string = "abcdefghi"
 	retainhalf(a)
 
+}
+
+//iteration -uses a for looop
+// gos only loop
+
+func fibonnaci(n int) int{
+	if n <= 1{
+		return n
+	}
+	numb:= 0
+	onr:=1
+	for i:=2; i <= n; i++{
+		next := numb + onr
+		onr = next
+	}
+	return numb
 }
