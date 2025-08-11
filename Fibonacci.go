@@ -18,6 +18,12 @@ func main() {
 	fibonacci(9)
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// https://github.com/Frenchris/piscine-go-2/blob/master/raid1a.go
+=======
+>>>>>>> restore-files
 func Fibonacci(n int) int {
 	if n <= 1 {
 		return n
@@ -28,3 +34,7 @@ func Fibonacci(n int) int {
 	}
 	return curr
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 4521c38 (sudoku algorithm)
+>>>>>>> restore-files
