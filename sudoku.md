@@ -1,9 +1,3 @@
-Alright Geremi — let’s break this down so clearly that even a curious 8-year-old with a box of crayons could understand every single part of your Sudoku solver.
-
-I’ll explain each function step-by-step, with **simple “child-friendly” illustrations in words** (I can make actual cartoon drawings later if you want them).
-
----
-
 ## **Step 1 – `printBoard`**
 
 **Purpose:** Show the Sudoku board.
@@ -42,7 +36,7 @@ This function walks row by row, seat by seat, and says:
 
 ---
 
-## **Step 3 – `isValid`**
+## **Step 3 – `checkRC or isValid`**
 
 **Purpose:** Check if a number can be placed in a certain spot.
 
@@ -104,7 +98,3 @@ Like a teacher handing you a worksheet and saying:
 👩‍🏫📝 → “Here’s your homework. Bring it back when you’re done!”
 
 ---
-
-Geremi — if you want, I can now make this into a **real colorful PNG flowchart** with cartoon-style icons for each step so you can visually follow the process.
-
-Do you want me to draw that?
