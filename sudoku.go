@@ -1,204 +1,9 @@
-<<<<<<< HEAD
-
-=======
-// package main
-
-// import (
-// 	"fmt"
-// 	"os"
-// )
-// func checksNumb (board [][]byte, row,column int, num byte) {
-// // /check if same number already exists in the same row
-
-// //we loop across the 9 cells if any given cell contains the same number we want to place num we immmediately return false
-
-// //check row
-
-// //check if number already exists in the same column
-// //similar logic but here we loop verically
-
-// // check column
-// for i:=0; i < 9; r++{
-// 	if board[row][c] == num || board[c][col]== num{
-// 		return false
-// 	}
-// }
-
-
-// //check the area 3 by 3 sub grid if the same number already exists
-// //This is math to find the top-left corner
-
-// // eg if row = 5 row % 3 = 2 so start row  = 5 - 2 = 3
-// // eg if col = 7 row % 3 = 1 so start row  = 7 - 2 = 6
-// // top left corner of thi subgrid is at (3,6)
-
-// startRow:= (row/3) * 3
-// startColumn := (col / 3) * 3
-// 	for c:= startRow; c < startRow+3; c++{
-// 		for r:=startColumn; r < startColumn+3; r++{
-// 			if board[c][r] == num {
-// 				return false
-// 			}
-// 		}
-// 	}
-// 	return true
-
-// // 	How it works:
-// // Row check:
-// // Goes through the entire row row to make sure the number isn’t already there.
-
-// // Column check:
-// // Goes through the entire column col to make sure the number isn’t already there.
-
-// // 3×3 box check:
-// // Finds the top-left corner of the 3×3 square the cell belongs to,
-// // then checks that small grid for the same number.
-
-// }
-// func solveSudoku(board [][]byte) bool {
-// 	for row := 0; row < 9; row++ {
-// 		for col := 0; col < 9; col++ {
-// 			if board[row][col] == '.' {
-// 				for num := byte('1'); num <= '9'; num++ {
-// 					if isValid(board, row, col, num) {
-// 						board[row][col] = num
-// 						if solveSudoku(board, count) {
-// 							return true
-// 						}
-// 						board[row][col] = '.'
-// 					}
-// 				}
-// 				return false
-// 			}
-// 		}
-// 	}
-// 	return true
-// }
-
-// func hasUniqueSolution(board [][]byte) bool {
-// 	count := 0
-// 	copyBoard := make([][]byte, 9)
-// 	for i := 0; i < 9; i++ {
-// 		copyBoard[i] = make([]byte, 9)
-// 		copy(copyBoard[i], board[i])
-// 	}
-// 	solveSudoku(copyBoard, &count)
-// 	return count == 1
-// }
-
-// func copyBoard(src [][]byte) [][]byte {
-// 	dest := make([][]byte, 9)
-// 	for i := 0; i < 9; i++ {
-// 		dest[i] = make([]byte, 9)
-// 		copy(dest[i], src[i])
-// 	}
-// 	return dest
-// }
-
-// func printBoard(board [][]byte) {
-// 	for i := 0; i < 9; i++ {
-// 		for j := 0; j < 9; j++ {
-// 			fmt.Print(string(board[i][j]))
-// 			if j < 8 {
-// 				fmt.Print(" ")
-// 			}
-// 		}
-// 		fmt.Println("$")
-// 	}
-// }
-
-//  func main() {
-// 	arguments:= os.Args
-// 	fmt.Println(len(arguments))
-
-// 	//arguments must be atleat ten including the program name
-// 	if len(arguments) != 10 {
-// 		fmt.Println("Error")
-// 		return
-// 	}
-
-// 		//a 2d array that sets the fixed dimensions of an object
-// 		var board [9][9]byte
-
-
-// 	//validate each row must have atleat 9 characters and they must not be the same
-// 	for i:=1; i <=9; i++{
-// 		args:=os.Args[i+1]
-// 		if len(args) != 9 {
-// 			// printing an error if the length of a string is not 9
-// 			fmt.Printf("Error")
-// 			return 
-// 		}
-// 		// checking if each argument is either a '.' or a number
-// 		// for index,value:= range arguments[i]{
-// 		// 	if value != '.' || value < '1' || value < '9' {
-// 		// 		fmt.Printf("Error: Row %d has invalid charcters: %c\n", i, value)
-// 		// 		return 
-// 		// 	}
-
-// 		// 	// a 2d array used for fixing a known dimensions of an array
-// 		// 	board[i - 1][index] = byte(value) 
-// 		// }
-// 				row := make([]byte, 9)
-// 		for j := 0; j < 9; j++ {
-// 			ch := arg[j]
-// 			if ch != '.' && (ch < '1' || ch > '9') {
-// 				fmt.Println("Error")
-// 				return
-// 			}
-// 			row[j] = '.'
-// 		}
-// 		board[i] = row
-// 			for i := 0; i < 9; i++ {
-// 		arg := os.Args[i+1]
-// 		for j := 0; j < 9; j++ {
-// 			ch := arg[j]
-// 			if ch != '.' {
-// 				if !isValid(board, i, j, ch) {
-// 					fmt.Println("Error")
-// 					return
-// 				}
-// 				board[i][j] = ch
-// 			}
-// 		}
-// 	}
-// 		copyForCount := copyBoard(board)
-// 	if countSolutions(copyForCount, 2) != 1 {
-// 		fmt.Println("Error")
-// 		return
-// 	}
-// 		if !solve(board) {
-// 		fmt.Println("Error")
-// 		return
-// 	}
-// 	printBoard(board)
-
-// 	}
-
-// 	fmt.Println("arguments ok")
-
-// 	fmt.Println(arguments)
-// }
->>>>>>> restore-files
-
 package main
 
 import (
 	"fmt"
 	"os"
 )
-
-
-
-// 1.) function check if anumber can go in a cell it answers one question: "if i put this number here will it break the sudoku rules"
-// Row Check  Loops through all 9 cells in the given row and sees if num is already there.
-
-// Column Check  Loops through all 9 cells in the given column and sees if num is already there.
-
-// 3×3 Subgrid Check  Figures out the top-left corner of the 3×3 box, then loops through all cells in that box to see if num is already there.
-
-// If it passes all checks → return true.
-// If it fails any check → return false.
 
 func isValid(board [][]byte, row, col int, num byte) bool {
 	// check row and column
@@ -239,6 +44,17 @@ func isValid(board [][]byte, row, col int, num byte) bool {
 
 // // If no numbers work → return false (dead end).
 
+
+// think of it as 
+// function solve(board) {
+//   if (board is solved) return true;
+//   else {
+//     try a number;
+//     if it works, keep going;
+//     if not, erase it and try next number;
+//   }
+// // }
+
 func solve(board [][]byte) bool {
 	for r := 0; r < 9; r++ {
 		for c := 0; c < 9; c++ {
@@ -264,6 +80,10 @@ func solve(board [][]byte) bool {
 // If count ever reaches limit (in this case 2), it stops early — no need to keep searching.
 
 // Used to make sure the given puzzle has exactly 1 solution.
+
+// This is a backtracking solver, but instead of stopping early, it counts all solutions until limit is reached.
+
+// That return 1 at the bottom is the base case it means "This path is a complete, valid solution".
 
 func countSolutions(board [][]byte, limit int) int {
 	for r := 0; r < 9; r++ {
@@ -291,14 +111,23 @@ func countSolutions(board [][]byte, limit int) int {
 
 // Necessary because countSolutions modifies the board while checking.
 
+
 func copyBoard(src [][]byte) [][]byte {
-	dest := make([][]byte, 9)
-	for i := 0; i < 9; i++ {
-		dest[i] = make([]byte, 9)
-		copy(dest[i], src[i])
-	}
-	return dest
+    // Step 1: Create a new outer slice (like `let dest = []`)
+    dest := make([][]byte, 9)
+
+    // Step 2: For each row
+    for i := 0; i < 9; i++ {
+        // create a new row of 9 bytes (like `new Array(9)`)
+        dest[i] = make([]byte, 9)
+
+        // copy the values from src[i] into dest[i]
+        copy(dest[i], src[i])
+    }
+
+    return dest
 }
+
 
 // Loops through each row and column, printing values with spaces.
 
