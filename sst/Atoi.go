@@ -18,6 +18,6 @@ func main() {
 	s:= "9"
 	fin:= Atoi(s)
 	fmt.Printf("this is an %T\n", s)
-	fmt.Printf("this is an %T", fin)
+	fmt.Printf("this is an %T\n", fin)
 }
 
