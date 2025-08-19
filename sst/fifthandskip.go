@@ -13,13 +13,9 @@ func FifthAndSkip(str string) string{
 	s:=""
 	for i:=0; i < len(final); i++{
 		s += string(final[i])
-		if i != 1 {
-			if i % 5 == 0 {
+			if (i+1) % 5 == 0{
 				s += " "
 			}
-		}
-	
-	
 	}
 	return s
 
