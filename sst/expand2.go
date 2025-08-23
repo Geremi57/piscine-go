@@ -10,9 +10,10 @@ func main() {
 	res := ""
 	pri:= ""
 	if len(os.Args) == 2 {
-		// fmt.Print("")
 		arguments := os.Args[1:]
 
+
+		//join all arguments
 		input := ""
 		for i:= 0; i < len(arguments); i++{
 			if i > 1 {
@@ -20,6 +21,10 @@ func main() {
 			}
 			input += arguments[i]
 		}
+		fmt.Println(input)
+		//checks how many " " 
+		// characters there are before the next 
+		// letter or actual character like a number
 		for _,value := range input {
 			if value == ' '{
 				count ++
@@ -27,18 +32,22 @@ func main() {
 					break
 				}
 			}
-		for i:= count; i < len(input); i++{
-			out += string(input[i])
-		}
-		spacecount := 0
 
-		for i, value := range out{
-			if value == ' ' && i > 0 && out[i - 1] != ' ' {
-				res += "   "
+			for i:= count; i < len(input); i++{
+				out += string(input[i])
 			}
-			res += string(value)
-		}
-
+		fmt.Println(out)
+		//this will add three spaces between words
+			for i, value := range out{
+				if value == ' ' && i > 0 && out[i - 1] != ' ' {
+					res += "   "
+				}
+				res += string(value)
+			}
+		fmt.Println(res)
+			
+			//checks how many space characters there are if there are any
+			spacecount := 0
 		for _,value := range res {
 			if value == ' '{
 				spacecount ++
@@ -46,6 +55,7 @@ func main() {
 					pri += " "
 				}
 			}else {
+				// if the value we are in is not ' ' reset the space count to 0
 				spacecount = 0
 				pri += string(value)
 			}
