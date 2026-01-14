@@ -16,7 +16,7 @@ func Itoa(n int) string{
 	for n > 0{
 		//getting the last digit
 		d:= n%10
-		results = string(rune(d) + '0') + results
+		results = string(d + '0') + results
 		n /= 10
 	}
 	return results
@@ -28,3 +28,4 @@ func main() {
 	fmt.Printf("The type of %v is a %T", fin, ans)
 
 }
+

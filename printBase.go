@@ -10,7 +10,7 @@ if n == 0 {
 	result := ""
 	for n > 0 {
 		remainder := n % base
-		result = string('0' + remainder) + result
+		result = string('0' + rune(remainder)) + result
 		n = n / base
 	}
 	return result
