@@ -7,7 +7,13 @@ import (
 )
 
 func Formatter(str string) string {
+	
+	str = apostrophes(str)
+	str = Punctuate(str)
+	str = AorAn(str)
 	str = normalizeCommands(str)
+
+
 	s := strings.Fields(str)
 	for i:=0; i < len(s); i++ {
 if keyWord(s[i]) {
@@ -75,13 +81,7 @@ func bind(s []string, n int, operate string, j int) []string {
 		s[n - 1] = hex(s[n - 1])
 		case "bin":
 		s[n - 1] = bin(s[n - 1])
-		case "punctuate":
-		s[n - 1] = Punctuate(s[n - 1])
-		case "aoran":
-			s[n - 1 ] = AorAn(s[n - 1])
-		case "apostrophes":
-		s[n - 1] = apostrophes(s[n - 1])
-case "upn":
+		case "upn":
 		text := strings.Join(s[start:n], " ")
 		text = upperN(text, j)
 		copy(s[start:n], strings.Fields(text))

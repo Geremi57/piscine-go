@@ -36,6 +36,6 @@ func Punctuate(str string) string {
 		// fin := strings.Join(string(res), " ")
 		fmt.Println(res)
 		fmt.Println(fin)
-		return marks
+		return fin
 }
 
