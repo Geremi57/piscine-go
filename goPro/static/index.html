@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Go Study Buddy</title>
+  </head>
+  <body>
+    <div id="chat"></div>
+    <input id="input" placeholder="Ask me something..." />
+    <button onclick="ask()">Send</button>
+
+    <script>
+      async function ask() {
+        const input = document.getElementById("input");
+        const chat = document.getElementById("chat");
+
+        const response = await fetch("http://localhost:8080/chat", {
+          method: "POST",
+          body: input.value,
+        });
+
+        const answer = await response.text();
+
+        chat.innerHTML += `<p><b>You:</b> ${input.value}</p>`;
+        chat.innerHTML += `<p><b>Buddy:</b> ${answer}</p>`;
+
+        input.value = "";
+      }
+    </script>
+  </body>
+</html>
