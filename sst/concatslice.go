@@ -15,5 +15,5 @@ func concatSlice(slice1, slice2 []int) []int{
 }
 
 func main() {
-	fmt.Println(concatSlice([]int{1,2,3}, []int{}))
+	fmt.Println(concatSlice([]int{1,2,3}, []int{4,5,6}))
 }

@@ -1,8 +1,9 @@
-
 package main
 
-import ("os"
-		"fmt")
+import (
+	"fmt"
+	"os"
+)
 
 func main(){
 	if len(os.Args) != 2 {
@@ -16,10 +17,12 @@ func main(){
 	
 	for i:=1; i < len(os.Args); i++{
 		if i > 1 {
-			s+= " "
+			s += " "
 		}
 		s += os.Args[i]
 	}
+	fmt.Println(len(os.Args))
+	fmt.Println(s)
 
 	for i,value := range s{
 		if value != ' '{

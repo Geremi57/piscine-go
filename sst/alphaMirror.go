@@ -13,10 +13,10 @@ func alphaMirror(s string) string {
 	lFinal := []rune{}
 	
 	for j := 'Z'; j >= 'A'; j-- {
-		uStart = append(uStart, rune(j))
+		uStart = append(uStart, j)
 	}
 	for i:= 'A'; i <= 'Z'; i++{
-		uFinal = append(uFinal, rune(i))
+		uFinal = append(uFinal, i)
 	}
 	for j := 'z'; j >= 'a'; j-- {
 		lStart = append(lStart, j)

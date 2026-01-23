@@ -16,7 +16,7 @@ func CamelToSnakeCase(s string) string{
 				if i != 0 && v >= 'A' && v <= 'Z' {
 							final += "_"
 						} 
-						final += string(v)
+			 			final += string(v)
 					}
 		}
 		if !resp{
