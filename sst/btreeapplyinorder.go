@@ -37,7 +37,7 @@ func main() {
 		root = insert(root, val)
 	}
 	
-	BTreeApplyInorder(root, func(v int) {
+	BTreeApplyInorder(root, func(v int){
 		fmt.Print(v, " ")
 	})
 
