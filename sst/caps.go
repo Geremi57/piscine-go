@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 func AlphaCount(s string) string {
@@ -22,5 +23,5 @@ func AlphaCount(s string) string {
 
 
 func main() {
-	fmt.Println(AlphaCount("hello world 72        4455 /"))
+	fmt.Println(AlphaCount("hello woRld 72"))
 }
