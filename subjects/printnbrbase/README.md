@@ -47,8 +47,8 @@ func main() {
 	piscine.PrintNbrBase(125, "aa")
 	z01.PrintRune('\n')
 }
-```
 
+```
 And its output :
 
 ```console
