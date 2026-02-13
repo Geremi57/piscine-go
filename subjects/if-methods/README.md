@@ -1,3 +1,0 @@
-## if + `.methods()`
-
-    startsWith / endWith

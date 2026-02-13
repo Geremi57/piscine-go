@@ -1,3 +1,0 @@
-## 🌟 Cloning vs Copying
-
-### Instructions
