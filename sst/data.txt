@@ -1,0 +1,6 @@
+zipstring
+countch
+itoa
+addprim
+notdec
+findpa

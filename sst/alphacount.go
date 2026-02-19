@@ -18,3 +18,10 @@ func main() {
 	fmt.Println(AlphaCount("Hello 78lplp 90World!    4455 /"))
 
 }
+
+zipstring
+countch
+itoa
+addprim
+notdec
+findpa

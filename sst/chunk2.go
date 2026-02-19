@@ -27,6 +27,6 @@ func chunk(slice []int, n int){
 
 func main() {
 		sl := [] int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
-		chunk(sl, 8)
+		chunk(sl, 5)
 
 }
