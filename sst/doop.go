@@ -1,7 +1,9 @@
 package main
 
-import ("fmt" 
-"os")
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	arguments := os.Args[1:]
@@ -19,32 +21,58 @@ func main() {
 	}
 
 	final:=0
-	if n1 >= 0 && n1 <= 9 && n2 >= 0 && n2 <= 9 {
-		if sign == "+"{
+	
+		// if sign == "+"{
+		// 	final = n1 + n2
+		// }else if sign == "-" {
+		// 	final = n1 - n2
+		// }else if sign == "*" {
+		// 	final = n1 * n2
+		// }else if sign == "/" {
+		// 	if n2 == 0{
+		// 		fmt.Println("No division by 0")
+		// 		return
+		// 	}
+		// 	final = n1 / n2
+		// }else if sign == "%" {
+		// 	if n2 == 0{
+		// 		fmt.Println("No modulo by 0")
+		// 		return
+		// 	}
+		// 	final = n1 % n2
+		// }
+
+		switch sign{
+		case "+":
 			final = n1 + n2
-		}else if sign == "-" {
+		case "-":
 			final = n1 - n2
-		}else if sign == "*" {
+		case "*":
 			final = n1 * n2
-		}else if sign == "/" {
-			if n2 == 0{
-				fmt.Println("No division by 0")
+		case "/":
+			final = n1 / n2
+			if n2 == 0 {
+				fmt.Println("no division by 0")
 				return
 			}
 			final = n1 / n2
-		}else if sign == "%" {
-			if n2 == 0{
-				fmt.Println("No modulo by 0")
+		case "%":
+			if n2 == 0 {
+				fmt.Println("no modulo by 0")
 				return
 			}
 			final = n1 % n2
+		default:
+			return
+		
 		}
-	}
-	fmt.Println(final)
-	fmt.Print(final)
 
-	fmt.Print(n1)
-	fmt.Print(n2)
+	
+	fmt.Println(final)
+	// fmt.Print(final)
+
+	// fmt.Print(n1)
+	// fmt.Print(n2)
 
 
 }

@@ -36,3 +36,32 @@ func main() {
 	fmt.Println(itoa(123))
 	fmt.Println(atoi("young"))
 }
+
+func atoi(str) int{
+	n :=0
+
+	for _,v := range str{
+		if v < '0' || v > '9'{
+			return 0
+		}
+		n = n * 10 + int(v - '0')
+	}
+	return n
+}
+
+func itoa(n int) string{
+	if n == 0 {
+		return "0"
+	}
+	if n < 0 {
+		n = -n
+	}
+
+	result := ""
+	for n > 0 {
+		d := n%10
+		result = string(d + '0') + result
+		n /= 10
+	}
+	return result
+}

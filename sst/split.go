@@ -1,5 +1,5 @@
 package main
- 
+
 import "fmt"
 
 func Split(s, sep string) []string {
@@ -24,6 +24,6 @@ func Split(s, sep string) []string {
 func main() {
 	s := "HelloHAhowHAareHAyou?"
 	fmt.Printf("%#v\n", Split(s, "HA"))
-// fmt.Println(Split(s, sep string))
+fmt.Println(Split(s, "HA"))
 }
 

@@ -10,8 +10,8 @@ func ConcatAlternate(slice1, slice2 []int) []int{
 	}
 		for i:=0; i < minlength; i++{
 			fin = append(fin, slice1[i], slice2[i])
-
 		}
+		
 		if len(slice1) > minlength {
 			fin = append(fin, slice1[minlength:]...)
 		}
@@ -23,5 +23,5 @@ func ConcatAlternate(slice1, slice2 []int) []int{
 }
 
 func main() {
-	fmt.Println(ConcatAlternate([]int{2,4,6,8}, []int{3,5,7,9,10}))
+	fmt.Println(ConcatAlternate([]int{2,4,6}, []int{3,5,7,9,10}))
 }

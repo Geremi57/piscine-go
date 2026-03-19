@@ -1,6 +1,7 @@
 package main
 
-import "fmt"
+import ("fmt"
+"os")
 
 func hasPrefix(str, prefix string) bool{
 	if len(prefix) > len(str){
@@ -28,10 +29,12 @@ func hasSuffix(str, suffix string) bool{
 }
 
 func main() {
-	prefixes := []string{"up", "sub", "fr", "vic"}
-	suffixes := []string{"er", "scribe", "tory", "gic"}
 
-	word:= "subscribe"
+	args  := os.Args[1]
+	prefixes := []string{"up", "sub", "fr", "vic"}
+	suffixes := []string{"er", "tory", "gic","be"}
+
+	word:= args
 	foundPrefix := ""
 	foundSuffix := ""
 

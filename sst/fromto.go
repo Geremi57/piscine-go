@@ -7,7 +7,7 @@ func itoa(s int) string{
 	for s > 0 {
 		d := s%10
 
-		result = string(rune(d) + '0') + result
+		result = string(d + '0') + result
 		s /= 10
 	}
 	return result
@@ -27,7 +27,7 @@ func fromto(a, b int) string{
 }
 
 func main() {
-	n1 := 12
-	n2 := 56
+	n1 := 1
+	n2 := 111
 	fmt.Println(fromto(n1, n2))
 }

@@ -22,5 +22,5 @@ func FifthAndSkip(str string) string{
 }
 
 func main() {
-	fmt.Println(FifthAndSkip("abcd efgh ijkl mnop qrst"))
+	fmt.Println(FifthAndSkip("abcd efgh ijkl mnop qrs"))
 }

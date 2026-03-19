@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func saveandmiss(s string, num int) string{
+func SaveAndMiss(s string, num int) string{
 	fin := ""
 	arr := []string{}
 	for i:=0; i < len(s); i += num {
@@ -28,5 +28,11 @@ func saveandmiss(s string, num int) string{
 
 func main(){
 a := "what is your name"
-fmt.Println(saveandmiss(a, 3))
+fmt.Println(SaveAndMiss(a, 3))
+fmt.Println(SaveAndMiss("123456789", 3))
+	fmt.Println(SaveAndMiss("abcdefghijklmnopqrstuvwyz", 3))
+	fmt.Println(SaveAndMiss("", 3))
+	fmt.Println(SaveAndMiss("hello you all ! ", 0))
+	fmt.Println(SaveAndMiss("what is your name?", 0))
+	fmt.Println(SaveAndMiss("go Exercise Save and Miss", -5))
 }

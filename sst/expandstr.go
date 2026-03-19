@@ -16,9 +16,9 @@ func main(){
 	start := 0
 	
 	for i:=1; i < len(os.Args); i++{
-		if i > 1 {
-			s += " "
-		}
+		// if i > 1 {
+		// 	s += " "
+		// }
 		s += os.Args[i]
 	}
 	fmt.Println(len(os.Args))
@@ -46,6 +46,9 @@ func main(){
 			}
 		}
 	}
+	fmt.Println(len(s))
+	fmt.Println(len(os.Args))
+
 	fmt.Println(str)
 
 }

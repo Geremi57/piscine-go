@@ -20,6 +20,7 @@ func main() {
 	fmt.Println(HashCode("A"))
 	fmt.Println(HashCode("AB"))
 	fmt.Println(HashCode("BAC"))
+	fmt.Println(HashCode("Hello"))
 	fmt.Println(HashCode("Hello World"))
 	fmt.Println(HashCode("14 Avril 2014"))
 

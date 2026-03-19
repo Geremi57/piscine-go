@@ -12,7 +12,7 @@ func printHex(b byte) {
 	second := b % 16
 
 	fmt.Print(string(hex[first]))
-	fmt.Print(string((hex[second])))
+	fmt.Print(string(hex[second]))
 
 }
 
