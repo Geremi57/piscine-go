@@ -2,33 +2,37 @@ package main
 
 import "fmt"
 
+
 func RevConcatAlternate(slice1, slice2 []int) []int {
-	fin := []int{}
-	res := []int{}
-	minlength:= len(slice1)
+	result := []int{}
 
-	if minlength > len(slice2) {
-		minlength = len(slice2)
+	i := len(slice1) - 1
+	j := len(slice2) - 1
+
+	// Phase 1: handle extra elements
+	for i > j {
+		result = append(result, slice1[i])
+		i--
+	}
+	for j > i {
+		result = append(result, slice2[j])
+		j--
 	}
 
-	for i := 0; i < minlength; i++ {
-		fin = append(fin, slice1[i], slice2[i])
+	// Phase 2: alternate (equal sizes now)
+	for i >= 0 && j >= 0 {
+		result = append(result, slice1[i])
+		result = append(result, slice2[j])
+		i--
+		j--
 	}
-	// return fin
-	if minlength < len(slice1) {
-		fin = append(fin, slice1[minlength:]...)
-	}
-	if minlength < len(slice2) {
-		fin = append(fin, slice2[minlength:]...)
-	}
-	
-	for i:=len(fin) - 1; i >= 0; i--{
-		res = append(res, fin[i])
-	}
-	return res
 
+	return result
 }
-
 func main() {
 	fmt.Println(RevConcatAlternate([]int{1,2,3}, []int{4,5,6,7,8}))
+	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6}))
+	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6, 7, 8, 9}))
+	fmt.Println(RevConcatAlternate([]int{1, 2, 3, 9, 8}, []int{4, 5}))
+	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{}))
 }
